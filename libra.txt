@@ -1,0 +1,6 @@
+if(currencySelect.value == "libra") {
+    currencyValueToConvert.innerHTML = new Intl.NumberFormat("en-UK", {
+        style: "currency" ,
+        currency: "GBP"
+    }).format(inputCurrencyValue/libraToday)
+}
