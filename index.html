@@ -18,8 +18,12 @@
     <main>
         <label>
             Converter <b>de </b>
-            <select>
-                <option>R$ Real Brasileiro</option>
+            <select class="convert-select">
+                <option value="brasil">R$ Real Brasileiro</option>
+                <option value="europa">€ EURO</option>
+                <option value="eua">US$ Dólar Americano</option>
+                <option value="inglaterra">£ Libras</option>
+                <option value="mexico">M$ Peso Mexicano</option>
             </select>
         </label>
         <label>
@@ -28,7 +32,8 @@
                 <option value="dolar">US$ Dólar Americano</option>
                 <option value="euro">€ EURO</option>
                 <option value="libra">£ Libras</option>
-                <option value="mexico">M$ Peso Mexicano</option>
+                <option value="peso">M$ Peso Mexicano</option>
+                <option value="real">R$ Real Brasileiro</option>
             </select>
         </label>
         <label>
@@ -39,8 +44,8 @@
         <button>Converter</button>
         <section>
             <div class="currency-box">
-                <img src="./assets/Real.png" alt="moeda-a-converter">
-                <p class="currency">Real</p>
+                <img class="currency-img-convert" src="./assets/Real.png" alt="moeda-a-converter">
+                <p class="currency" id="currency-convert">Real</p>
                 <p class="currency-value" id="real">R$ 0,00</p>
 
             </div>

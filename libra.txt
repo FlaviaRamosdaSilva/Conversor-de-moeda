@@ -13,3 +13,6 @@ function changeCurrency () {
         currencyName.innerHTML = "Libras"
         currencyImage.src = "./assets/Libra.png"
     }
+
+
+     const inputCurrencyValue = (inputCurrency2Value.replace("," , "."))
