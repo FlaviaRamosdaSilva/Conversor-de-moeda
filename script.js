@@ -9,6 +9,7 @@ function convertValues() {
     const dolarToday = 5.2
     const euroToday = 6.2
     const libraToday = 8.0
+    const pesoToday = 0.28
 
     if (currencySelect.value == "dolar") {
         currencyValueToConverted.innerHTML = new Intl.NumberFormat("en-US", {
@@ -24,30 +25,50 @@ function convertValues() {
         }).format(inputCurrencyValue / euroToday)
 
     }
+    if (currencySelect.value == "libra") {
+        currencyValueToConverted.innerHTML = new Intl.NumberFormat("en-UK", {
+            style: "currency",
+            currency: "GBP"
+        }).format(inputCurrencyValue / libraToday)
+    }
+    if (currencySelect.value == "mexico") {
+        currencyValueToConverted.innerHTML = new Intl.NumberFormat("es-MX", {
+            style: "currency",
+            currency: "MXN"
+        }).format(inputCurrencyValue / pesoToday)
+    }
 
 
-    currencyValueToConvert.innerHTML = new Intl.NumberFormat("pt-BR", {
-        style: "currency",
-        currency: "BRL"
-    }).format(inputCurrencyValue)
+currencyValueToConvert.innerHTML = new Intl.NumberFormat("pt-BR", {
+    style: "currency",
+    currency: "BRL"
+}).format(inputCurrencyValue)
 
 }
 
-function changeCurrency () {
+function changeCurrency() {
     const currencyName = document.getElementById("currency-name")
     const currencyImage = document.querySelector(".currency-img")
 
-    if(currencySelect.value == "dolar") {
+    if (currencySelect.value == "dolar") {
         currencyName.innerHTML = "Dólar Americano"
         currencyImage.src = "./assets/dolar.png"
     }
-    if(currencySelect.value == "euro") {
+    if (currencySelect.value == "euro") {
         currencyName.innerHTML = "Euro"
         currencyImage.src = "./assets/euro.png"
     }
+    if(currencySelect.value == "libra") {
+        currencyName.innerHTML = "Libras"
+        currencyImage.src = "./assets/Libra.png"
+    }
+    if(currencySelect.value == "mexico") {
+        currencyName.innerHTML = "Peso Mexicano"
+        currencyImage.src = "./assets/mexico2-flag.png"
+    }
+    convertValues()
 
-    
 }
 
-currencySelect.addEventListener("change" , changeCurrency)
+currencySelect.addEventListener("change", changeCurrency)
 convertButton.addEventListener("click", convertValues)

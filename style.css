@@ -100,3 +100,8 @@ Section {
     font-weight: 700;
     font-size: 20px;
 }
+
+.currency-img {
+    width: 44px;
+    height: 44px;
+}
