@@ -16,3 +16,9 @@ function changeCurrency () {
 
 
      const inputCurrencyValue = (inputCurrency2Value.replace("," , "."))
+
+      if (currencySelect.value == "dolar" && convertSelect.value == "eua") {
+        currencyValueToConverted.innerHTML = new Intl.NumberFormat("en-US", {
+            style: "currency",
+            currency: "USD"
+        }).format(inputCurrencyValue)
