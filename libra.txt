@@ -22,3 +22,8 @@ function changeCurrency () {
             style: "currency",
             currency: "USD"
         }).format(inputCurrencyValue)
+
+        currencyValueToConvert.innerHTML = new Intl.NumberFormat("pt-BR", {
+    style: "currency",
+    currency: "BRL"
+}).format(inputCurrencyValue)
