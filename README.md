@@ -12,6 +12,9 @@
 - CSS
 - JS
 
+## :rocket: Visite o site (projeto publicado):
+:fast_forward:<a href="https://conversor-de-moedas-flavia-ramos.netlify.app/"> Conversor_de_moedas</a>
+
 
 ## :flower_playing_cards: Imagens do Projeto:
 
