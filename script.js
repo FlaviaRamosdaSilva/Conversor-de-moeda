@@ -52,15 +52,16 @@ function changeCurrency() {
 
 }
 
-function convertValues() {
+async function convertValues() {
     const inputCurrency2Value = document.querySelector(".input-currency").value
     const inputCurrencyValue = (inputCurrency2Value.replace(",", "."))
     const currencyValueToConvert = document.querySelector("#real")
     const currencyValueToConverted = document.querySelector("#currency-value")
-    const dolarToday = 4.88
-    const euroToday = 5.25
-    const libraToday = 6.13
-    const pesoToday = 0.28
+    const data = await fetch("https://economia.awesomeapi.com.br/last/USD-BRL,EUR-BRL,GBP-BRL,MXN-BRL,BRL-USD").then(response => response.json())
+    const dolarToday = data.USDBRL.high
+    const euroToday = data.EURBRL.high
+    const libraToday = data.GBPBRL.high
+    const pesoToday = data.MXNBRL.high
     const realToday = 1.00
 
     if (convertSelect.value == "eua" && currencySelect.value == "dolar") {
